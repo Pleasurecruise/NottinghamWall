@@ -1,10 +1,14 @@
-<script setup>
-
-</script>
-
 <template>
-  <router-view></router-view>
+  <div id="app">
+    <router-view />
+  </div>
 </template>
 
-<style scoped>
-</style>
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+
+@Component({
+  name: 'App',
+})
+export default class extends Vue {}
+</script>
