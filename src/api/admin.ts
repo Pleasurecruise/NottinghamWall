@@ -7,7 +7,7 @@ import request from '@/utils/request'
 // 登录
 export const login = (data: any) =>
   request({
-    'url': '/admin/login',
+    'url': '/manage/login',
     'method': 'post',
     data: data
   })
@@ -15,7 +15,7 @@ export const login = (data: any) =>
   // 退出
  export const adminLogout = (params: any) =>
  request({
-   'url': `/admin/logout`,
+   'url': `/manage/logout`,
    'method': 'post',
    params
  })

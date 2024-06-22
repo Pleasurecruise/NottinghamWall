@@ -8,7 +8,7 @@ const service = axios.create({
   'timeout': 600000
 })
 
-// Request interceptors
+// 请求拦截器
 service.interceptors.request.use(
   (config: any) => {
     // Add X-Access-Token header to every request, you can add other custom headers here
@@ -25,7 +25,7 @@ service.interceptors.request.use(
   }
 )
 
-// Response interceptors
+// 响应拦截器
 service.interceptors.response.use(
   (response: any) => {
     // console.log(response, 'response')
@@ -33,7 +33,7 @@ service.interceptors.response.use(
       router.push('/login')
     }
     //请求响应中的config的url会带上代理的api需要去掉
-    response.config.url = response.config.url.replace('/api', '')
+    response.config.url = response.config.url.replace('/admin', '')
     // 请求完成，删除请求中状态
     const key = getRequestKey(response.config);
     removePending(key);
@@ -54,7 +54,7 @@ service.interceptors.response.use(
       }
     }
     //请求响应中的config的url会带上代理的api需要去掉
-    error.config.url = error.config.url.replace('/api', '')
+    error.config.url = error.config.url.replace('/admin', '')
     // 请求完成，删除请求中状态
     const key = getRequestKey(error.config);
     removePending(key);
