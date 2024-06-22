@@ -6,7 +6,7 @@
 
 该项目为NotinghamWall的次级项目，为和后端接口联调的前端小程序源码
 
-有意合作者也欢迎commit加入我
+有意合作者也欢迎发布Issues加入我
 
 **占坑开发中**
 
@@ -22,7 +22,7 @@
 
 ## 效果展示
 
-![登录页面](http://blog.yiming1234.cn/wp-content/uploads/2024/06/屏幕截图-2024-06-22-190840.png)
+![管理平台登录页面](https://yiming1234.oss-cn-beijing.aliyuncs.com/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-06-22%20190840.png)
 
 ## 相关信息
 
