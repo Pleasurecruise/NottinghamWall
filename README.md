@@ -22,7 +22,7 @@
 
 ## 效果展示
 
-[http://blog.yiming1234.cn/wp-content/uploads/2024/06/屏幕截图-2024-06-22-190840.png]
+[登录页面](http://blog.yiming1234.cn/wp-content/uploads/2024/06/屏幕截图-2024-06-22-190840.png)
 
 ## 相关信息
 
