@@ -12,10 +12,18 @@ export const login = (data: any) =>
     data: data
   })
 
-  // 退出
+// 退出
  export const adminLogout = (params: any) =>
  request({
    'url': `/manage/logout`,
    'method': 'post',
    params
  })
+
+// 分页查询
+export const getAdminList = (params: any) =>
+  request({
+    'url': `/manage/page`,
+    'method': 'get',
+    'params': params
+  })
