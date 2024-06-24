@@ -83,7 +83,7 @@ export default  {
       //发送ajax请求访问后端数据
       getAdminList(params).then(res => {
         //console.log(res)
-        if(res.data.code === 200) {
+        if(res.data.code === 1) {
           this.records = res.data.data.records
           this.total = res.data.data.total
         }
@@ -139,7 +139,7 @@ export default  {
         return
     }
       this.$router.push({
-        path: '/manage/update',
+        path: '/manage/add',
         query: {id: row.id}
       })
     }

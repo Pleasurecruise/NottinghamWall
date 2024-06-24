@@ -19,8 +19,8 @@
           <el-input v-model="ruleForm.idNumber"></el-input>
         </el-form-item>
         <div class="subBox">
-          <el-button type="primary" @click="submitForm('ruleForm',false)">保存</el-button>
-          <el-button v-if="this.optType === 'add'" type="primary" @click="submitForm('ruleForm',true)">重置</el-button>
+          <el-button type="primary" @click="submitForm('ruleForm')">保存</el-button>
+          <el-button v-if="this.optType === 'add'" type="primary" @click="resetForm">重置</el-button>
           <el-button @click="() => this.$router.push('/admin')">返回</el-button>
         </div>
       </el-form>
@@ -38,7 +38,7 @@ export default {
         username: '',
         sex: '1',
         phone: '',
-        idNumber: ''
+        idNumber: '',
       },
       rules:{
         name: [
@@ -72,29 +72,39 @@ export default {
       }
     }
   },
-  // 获取管理员信息
+  // 修改时回显管理员信息
   created(){
     this.optType = this.$route.query.id ? 'update' : 'add'
     if (this.optType === 'update') {
+      //alert(this.$route.query.id)
       getAdminById(this.$route.query.id).then(res => {
-        this.ruleForm = res.data.data
+        if(res.data.code === 1){
+          this.ruleForm = res.data.data
+        }
       })
     }
   },
   methods: {
-    submitForm(formName: string, isReset: boolean) {
-      this.$refs[formName].validate((valid: boolean) => {
+    // 重置表单
+    resetForm() {
+      this.ruleForm ={
+        name: '',
+        username: '',
+        sex: '1',
+        phone: '',
+        idNumber: '',
+      }
+    },
+    // 提交表单
+    submitForm(formName) {
+      this.$refs[formName].validate((valid) => {
         if (valid) {
           if(this.optType === 'add'){
             // 添加管理员
             addAdmin(this.ruleForm).then(res => {
               if(res.data.code === 1){
                 this.$message.success('添加成功')
-                if(isReset){
-                  this.$refs[formName].resetFields()
-                }else{
-                  this.$router.push('/admin')
-                }
+                this.$router.push('/admin')
               }else{
                 this.$message.error('添加失败')
               }
@@ -113,7 +123,7 @@ export default {
           }
         })
       }
-    }
+    },
 }
 </script>
 
