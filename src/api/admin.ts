@@ -27,3 +27,19 @@ export const getAdminList = (params: any) =>
     'method': 'get',
     'params': params
   })
+
+//  启用/禁用
+export const startOrStopAdmin = (params: any) =>
+  request({
+    'url': `/manage/status/${params.status}`,
+    'method': 'post',
+    'params': {id: params.id}
+  })
+
+//新增管理员
+export const addAdmin = (data: any) =>
+  request({
+    'url': '/manage',
+    'method': 'post',
+    data: data
+  })
