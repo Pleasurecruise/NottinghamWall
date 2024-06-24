@@ -43,3 +43,18 @@ export const addAdmin = (data: any) =>
     'method': 'post',
     data: data
   })
+
+//根据id查询管理员
+export const getAdminById = (id: number) =>
+  request({
+    'url': `/manage/${id}`,
+    'method': 'get'
+  })
+
+//修改管理员
+export const updateAdmin = (data: any) =>
+  request({
+    'url': '/manage',
+    'method': 'put',
+    data: data
+  })

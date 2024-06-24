@@ -21,6 +21,11 @@
           width="180">
         </el-table-column>
         <el-table-column
+          prop="email"
+          label="邮箱"
+          width="180">
+        </el-table-column>
+        <el-table-column
           prop="phone"
           label="手机号">
         </el-table-column>
