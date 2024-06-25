@@ -1,7 +1,7 @@
 import request from '@/utils/request'
 /**
  *
- * 员工管理
+ * 管理员管理
  *
  **/
 // 登录

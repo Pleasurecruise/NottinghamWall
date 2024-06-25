@@ -96,7 +96,7 @@ const router = new Router({
           path: "user",
           component: () => import("@/views/User/index.vue"),
           meta: {
-            title: "用户管理",
+            title: "学生管理",
             icon: "icon-user"
           }
         },

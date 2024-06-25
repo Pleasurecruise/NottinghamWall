@@ -2,8 +2,8 @@
   <div class="dashboard-container">
     <div class="container">
       <div class="tableBar">
-        <label style="margin-right:5px">用户姓名：</label>
-        <el-input v-model="name" placeholder="请输入管理员姓名" style="width:15%" />
+        <label style="margin-right:5px">学生姓名：</label>
+        <el-input v-model="name" placeholder="请输入学生姓名" style="width:15%" />
         <el-button type="primary" style="margin-left:25px" @click="pageQuery()">查询</el-button>
       </div>
       <el-table
@@ -16,8 +16,8 @@
           width="180">
         </el-table-column>
         <el-table-column
-          prop="username"
-          label="账号"
+          prop="studentid"
+          label="学号"
           width="180">
         </el-table-column>
         <el-table-column
@@ -72,7 +72,7 @@ export default  {
       //发送ajax请求访问后端数据
       getUserList(params).then(res => {
         //console.log(res)
-        if(res.data.code === 200) {
+        if(res.data.code === 1) {
           this.records = res.data.data.records
           this.total = res.data.data.total
         }
