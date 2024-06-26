@@ -78,7 +78,7 @@ const router = new Router({
         },
         {
           path:"comment",
-          component: () => import("@/views/comments/index.vue"),
+          component: () => import("@/views/Comments/index.vue"),
           meta: {
             title: "点赞和评论管理",
             icon: "icon-combo"
