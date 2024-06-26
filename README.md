@@ -22,7 +22,9 @@
 
 ## 效果展示
 
-![管理平台登录页面](https://yiming1234.oss-cn-beijing.aliyuncs.com/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-06-22%20190840.png)
+![image](https://github.com/Pleasurecruise/NottinghamWall/assets/144885467/ce3b65fc-e63f-4934-8317-3ea45e91927a)
+
+![image](https://github.com/Pleasurecruise/NottinghamWall/assets/144885467/0a0659ec-5b86-471c-b9eb-6558d1c3ae4a)
 
 ## 相关信息
 
