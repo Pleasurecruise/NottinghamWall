@@ -2,7 +2,7 @@
   <div class="dashboard-container">
     <div class="container">
       <h2>
-        点赞信息
+        点赞实时信息
       </h2>
       <el-table
         :data="tableData.filter(data => !search || data.name.toLowerCase().includes(search.toLowerCase()))"
