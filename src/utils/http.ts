@@ -1,6 +1,6 @@
 import { useMemberStore } from '@/stores'
-
-const baseURL = 'https://pcapi-xiaotuxian-front-devtest.itheima.net'
+// TODO: 本地开发环墨，需要修改为自己的IP地址
+const baseURL = 'https://localhost:8080'
 //添加拦截器
 const httpInterceptor = {
   //拦截器前触发
