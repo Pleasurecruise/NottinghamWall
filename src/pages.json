@@ -213,4 +213,11 @@
       }
     ]
   }
+//  "uniIdRouter": {
+//    "loginPage": "pages/index/index",
+//    "needLogin": [
+//      "pages/detail/.*"
+//    ],
+//    "resToLogin": true
+//  }
 }
